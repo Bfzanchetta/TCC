@@ -1,5 +1,7 @@
 package fourier;
 
+import java.util.Random;
+
 /**
  *
  * @author Breno
@@ -16,6 +18,17 @@ public class Onda {
     public Onda(double Amplitude, int frequenciaHertz) {
         this.Amplitude = Amplitude;
         this.frequenciaHertz = frequenciaHertz;
+    }
+
+    public void geraAmpliteAleatoria() {
+        //nao ta gerando os randoms diferentes, gera sempre o mesmo
+        Random r = new Random();
+        this.Amplitude = r.nextInt() * 100;
+    }
+
+    public void geraFrequenciaAleatoria() {
+        Random r = new Random();
+        this.frequenciaHertz = r.nextInt() * 400;
     }
 
     public double getAmplitude() {
